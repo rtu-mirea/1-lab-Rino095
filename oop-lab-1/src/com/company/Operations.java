@@ -59,7 +59,7 @@ public class Operations {
         double Sum = 0;
         int b = 0;
         for(int i = 0; i < count; i++){
-            if(i % 3 == 0){
+            if(i % 2 == 1){
                 Sum += Mass[i];
                 b++;
             }
@@ -70,7 +70,7 @@ public class Operations {
         double Sum = 1;
         int b = 0;
         for(int i = 0; i < count; i++){
-            if(i % 3 == 0){
+            if(i % 2 == 1){
                 Sum *= Mass[i];
                 b++;
             }
