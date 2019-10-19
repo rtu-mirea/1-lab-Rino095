@@ -1,4 +1,5 @@
 package com.company;
+
 import java.util.Scanner;
 import java.util.Random;
 
@@ -7,6 +8,17 @@ public class Operations {
     Scanner in = new Scanner(System.in);
     double[] Mass;
 
+    public void menu(){
+        System.out.println("Введите кол-во элементов массива: ");
+        count = in.nextInt();
+        Mass = new double[count];
+        System.out.println("Заполнение массива:\n0- Случайно\n1- С клавиатуры");
+        int random = in.nextInt();
+        Fill(random);
+        System.out.println("Вывод массива:\n0- Слева направо\n1- Справа налево");
+        int out_mass = in.nextInt();
+        Out(out_mass);
+    }
     private void Fill(int i){
         final Random random = new Random();
         if(i == 0){
@@ -47,7 +59,7 @@ public class Operations {
         double Sum = 0;
         int b = 0;
         for(int i = 0; i < count; i++){
-            if(i % 2 == 0){
+            if(i % 3 == 0){
                 Sum += Mass[i];
                 b++;
             }
@@ -58,7 +70,7 @@ public class Operations {
         double Sum = 1;
         int b = 0;
         for(int i = 0; i < count; i++){
-            if(i % 2 == 0){
+            if(i % 3 == 0){
                 Sum *= Mass[i];
                 b++;
             }
@@ -84,17 +96,6 @@ public class Operations {
         stuff = Mass[i];
         Mass[i] = Mass[i - 1];
         Mass[i - 1] = stuff;
-    }
-    public void menu(){
-        System.out.println("Введите кол-во элементов массива: ");
-        count = in.nextInt();
-        Mass = new double[count];
-        System.out.println("Заполнение массива:\n0- Случайно\n1- С клавиатуры");
-        int random = in.nextInt();
-        Fill(random);
-        System.out.println("Вывод массива:\n0- Слева направо\n1- Справа налево");
-        int out_mass = in.nextInt();
-        Out(out_mass);
     }
 }
 
