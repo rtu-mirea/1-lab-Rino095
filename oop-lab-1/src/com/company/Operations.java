@@ -47,7 +47,7 @@ public class Operations {
         double Sum = 0;
         int b = 0;
         for(int i = 0; i < count; i++){
-            if(i % 2 == 0){
+            if(i % 3 == 0){
                 Sum += Mass[i];
                 b++;
             }
