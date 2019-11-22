@@ -15,13 +15,13 @@ public class Main {
                         System.out.print("Работа завершена");
                         break;
                     case 1:
-                        task1(in);
+                        qvest1(in);
                         break;
                     case 2:
-                        task2(in);
+                        qvest2(in);
                         break;
                     case 3:
-                        task3(in);
+                        qvest3(in);
                         break;
                 }
             }
@@ -29,7 +29,7 @@ public class Main {
 
         }
     }
-    private static void task1(Scanner in){
+    private static void qvest1(Scanner in){
         Qvest1 obj = new Qvest1();
         int menu = 100;
         try {
@@ -57,7 +57,7 @@ public class Main {
 
         }
     }
-    private static void task2(Scanner in){
+    private static void qvest2(Scanner in){
         Qvest2 obj = new Qvest2();
         int menu = 100;
         try {
@@ -85,7 +85,7 @@ public class Main {
 
         }
     }
-    private static void task3(Scanner in){
+    private static void qvest3(Scanner in){
         Qvest3 obj = new Qvest3();
         int menu = 100;
         try {
