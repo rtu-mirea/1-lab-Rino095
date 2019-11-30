@@ -4,6 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Qvest1 {
+    Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
     private String line = "";
     private String line2 = "";
     private int x = 0;
@@ -42,7 +43,6 @@ public class Qvest1 {
     private void CountPhone(String line2, int temp){
         String str = line2;
         double sum = 0.0;
-        Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
         Matcher matcher = pattern.matcher(str);
         while(matcher.find()) {
             sum += Double.parseDouble(matcher.group());
