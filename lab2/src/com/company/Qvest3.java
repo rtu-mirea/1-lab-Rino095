@@ -26,6 +26,7 @@ public class Qvest3 {
     void IPv6(){
         String str="";
         line = line.trim();
+        boolean qwe= false;
         try {
             Pattern pattern = Pattern.compile("([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}");
             Matcher matcher = pattern.matcher(line);
@@ -33,6 +34,10 @@ public class Qvest3 {
                 str = matcher.group();
                 System.out.print("IPv6: "+ str +" в двоичном представлении: ");
                 Translation(str);
+                qwe = true;
+            }
+            if(!qwe){
+                System.out.println("\nIP не соответствует формату IPv6\n");
             }
         }
         catch (Exception ex) {
